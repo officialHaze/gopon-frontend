@@ -1,0 +1,32 @@
+.comment-container {
+	width: 40%;
+	background: white;
+	border-radius: 1rem;
+	box-shadow: 4px 4px 20px rgba(122, 122, 122, 0.3);
+	padding: 0 1rem;
+}
+
+.comment-header,
+.alias-img-header-container {
+	display: flex;
+	align-items: center;
+}
+
+.comment-header {
+	gap: 0.85rem;
+}
+
+.comment-alias-img {
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.alias-img-header-container {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.comment-body,
+.comment-header {
+	padding: 1rem 0;
+}

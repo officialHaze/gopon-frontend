@@ -1,0 +1,36 @@
+.sign-in-page,
+.google-sign-in {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+}
+
+.sign-in-page {
+	min-height: 80vh;
+}
+
+.sign-in-btn-container {
+	padding: 3rem 6rem;
+	box-shadow: 4px 4px 15px rgba(122, 122, 122, 0.3);
+}
+
+.google-sign-in {
+	gap: 1rem;
+	padding: 0.85rem;
+	background: #2b3a55;
+	border-radius: 0.5rem;
+}
+
+.google-sign-in-container {
+	padding: 2rem 1rem;
+	color: white;
+}
+
+.google-logo {
+	font-size: 1.25rem;
+}
+
+.sign-in-link {
+	color: white !important;
+}
