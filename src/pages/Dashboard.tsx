@@ -7,8 +7,9 @@ import Post from "../utils/Post";
 import GetUser from "../utils/GetUser";
 import SecretCards from "../components/SecretCards";
 import Navbar from "../components/Navbar";
-import "./Dashboard.css";
 import UploadSuccessPopUp from "../components/UploadSuccessPopUp";
+import { motion } from "framer-motion";
+import "./Dashboard.css";
 
 export default function Dashboard() {
 	interface Secrets {
@@ -109,10 +110,16 @@ export default function Dashboard() {
 		<>
 			<Navbar />
 			{uploaded && <UploadSuccessPopUp contentType="post" />}
-			<div className="dashboard-container">
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				transition={{ duration: 0.5 }}
+				className="dashboard-container"
+			>
 				<div className="post-wrapper">
 					<div className="post-container">
-						{!isAliasPresent && (
+						{!isAliasPresent ? (
 							<div className="alias-input-container">
 								<input
 									autoComplete="off"
@@ -125,13 +132,18 @@ export default function Dashboard() {
 									<img width={50} height={50} src={post.aliasImg} alt="chosen alias" />
 								)}
 							</div>
+						) : (
+							<div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+								<img style={{ width: "3rem", height: "3rem" }} src={post.aliasImg} alt="alias" />
+								<h3>{post.alias}</h3>
+							</div>
 						)}
 						<textarea
 							onChange={handleChange}
 							id="secret"
 							cols={60}
 							rows={10}
-							placeholder="What's your secret?"
+							placeholder="What's your secret today?"
 							value={post.secret}
 						/>
 						{post.secret !== "" && (
@@ -183,23 +195,32 @@ export default function Dashboard() {
 				<div className="dashboard-cards-container">
 					{secretPosts.map((post: Secrets) => {
 						return (
-							<div key={post._id}>
+							<div className="same-user-secret-cards-container" key={post._id}>
 								{post.secrets.map((secretItem: { secret: string; comments: [] }, index) => {
 									return (
-										<SecretCards
-											comments={secretItem.comments.length}
-											href={`/post/${post._id}/${index}`}
-											aliasImg={post.aliasImg}
-											alias={post.alias}
-											secret={secretItem.secret}
-										/>
+										<motion.div
+											initial={{ x: "-10rem" }}
+											animate={{ x: 0 }}
+											exit={{ x: "-10rem" }}
+											transition={{ duration: `0.${index + 4}` }}
+											style={{ borderBottom: "1px solid rgba(122, 122, 122, 0.3" }}
+											key={index}
+										>
+											<SecretCards
+												comments={secretItem.comments.length}
+												href={`/post/${post._id}/${index}`}
+												aliasImg={post.aliasImg}
+												alias={post.alias}
+												secret={secretItem.secret}
+											/>
+										</motion.div>
 									);
 								})}
 							</div>
 						);
 					})}
 				</div>
-			</div>
+			</motion.div>
 		</>
 	);
 }

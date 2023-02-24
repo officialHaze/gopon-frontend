@@ -12,7 +12,8 @@
 
 .sign-in-btn-container {
 	padding: 3rem 6rem;
-	box-shadow: 4px 4px 15px rgba(122, 122, 122, 0.3);
+	/* box-shadow: 4px 4px 15px rgba(122, 122, 122, 0.3); */
+	border: 1px solid rgba(122, 122, 122, 0.5);
 }
 
 .google-sign-in {
@@ -33,4 +34,28 @@
 
 .sign-in-link {
 	color: white !important;
+}
+
+@media only screen and (max-width: 600px) {
+	.sign-in-btn-container {
+		padding: 3rem 3rem;
+		width: 100%;
+	}
+
+	.sign-in-header,
+	.google-sign-in {
+		font-size: 0.85rem;
+	}
+
+	.sign-in-header {
+		text-align: center;
+	}
+
+	.google-sign-in {
+		gap: 0.85rem;
+	}
+
+	.google-logo {
+		font-size: 1rem;
+	}
 }

@@ -11,7 +11,7 @@ interface Comment {
 
 export default async function PostComment(comment: Comment) {
 	try {
-		const comments = await axios.post("http://localhost:5000/postComment", comment);
+		const comments = await axios.post("https://gopon-backend.vercel.app/postComment", comment);
 		return comments;
 	} catch (err) {
 		throw err;

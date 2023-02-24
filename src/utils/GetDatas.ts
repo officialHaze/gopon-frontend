@@ -4,7 +4,7 @@ export default async function GetDatas() {
 	try {
 		const { data } = await axios({
 			method: "GET",
-			url: "http://localhost:5000/secrets",
+			url: "https://gopon-backend.vercel.app/secrets",
 			withCredentials: true,
 		});
 		return data;

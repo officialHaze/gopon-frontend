@@ -14,7 +14,7 @@ export default async function GetSecret(id: string | undefined, index: string | 
 		if (id && index) {
 			const idInt = parseInt(id);
 			const indexInt = parseInt(index);
-			const { data }: Datas = await axios.post("http://localhost:5000/getSecret", {
+			const { data }: Datas = await axios.post("https://gopon-backend.vercel.app/getSecret", {
 				id: idInt,
 				index: indexInt,
 			});

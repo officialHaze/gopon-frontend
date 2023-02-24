@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Authenticate from "../utils/Authenticate";
 import { useEffect, useState } from "react";
-// import GetUser from "../utils/GetUser";
 import LogOutUser from "../utils/LogOutUser";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 const getUserProfileImg = async () => {
 	try {
 		const { data }: { data: string } = await axios({
 			method: "GET",
-			url: "http://localhost:5000/userProfileImg",
+			url: "https://gopon-backend.vercel.app/userProfileImg",
 			withCredentials: true,
 		});
 		return data;
@@ -59,10 +59,16 @@ export default function Navbar() {
 	}, [isAuthenticated]);
 
 	return (
-		<div className="nav-container">
+		<motion.div
+			initial={{ y: "-5rem" }}
+			animate={{ y: 0 }}
+			exit={{ y: "-5rem" }}
+			transition={{ duration: "0.5" }}
+			className="nav-container"
+		>
 			<div className="logo">
 				<Link to="/" className="link navbar-logo">
-					<h2>Anonymous</h2>
+					<h2>Gopon</h2>
 				</Link>
 			</div>
 			<div>
@@ -90,6 +96,6 @@ export default function Navbar() {
 					</div>
 				)}
 			</div>
-		</div>
+		</motion.div>
 	);
 }

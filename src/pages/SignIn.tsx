@@ -1,13 +1,20 @@
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { motion } from "framer-motion";
 import "./Sign-In.css";
 
 export default function SignIn() {
 	return (
 		<>
 			<Navbar />
-			<div className="sign-in-page">
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				transition={{ duration: 0.5 }}
+				className="sign-in-page"
+			>
 				<div className="sign-in-btn-container">
 					<div className="sign-in-header">
 						<h2>Sign in with our provider:</h2>
@@ -15,13 +22,13 @@ export default function SignIn() {
 					<div className="google-sign-in-container">
 						<div className="google-sign-in">
 							<FcGoogle className="google-logo" />
-							<Link className="link sign-in-link" to="http://localhost:5000/auth/google">
+							<Link className="link sign-in-link" to="https://gopon-backend.vercel.app/auth/google">
 								<h4>Sign in with Google</h4>
 							</Link>
 						</div>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</>
 	);
 }

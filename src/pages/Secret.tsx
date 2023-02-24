@@ -8,8 +8,9 @@ import Comments from "../components/Comments";
 import Authenticate from "../utils/Authenticate";
 import SignIn from "./SignIn";
 import Navbar from "../components/Navbar";
-import "./Secret.css";
 import UploadSuccessPopUp from "../components/UploadSuccessPopUp";
+import { motion } from "framer-motion";
+import "./Secret.css";
 
 const getSecret = async (id: string | undefined, index: string | undefined) => {
 	try {
@@ -87,7 +88,13 @@ export default function Secret() {
 		<>
 			<Navbar />
 			{uploaded && <UploadSuccessPopUp contentType="comment" />}
-			<div className="main">
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				transition={{ duration: 0.5 }}
+				className="main"
+			>
 				<div className="user-details-container">
 					<div className="user-alias-img-container">
 						<img src={userData.aliasImg} alt="alias" />
@@ -103,7 +110,7 @@ export default function Secret() {
 
 				<div className="post-comments">
 					<div>
-						<h3>Comments({userData.comments.length})</h3>
+						<h3 style={{ fontSize: "1.2rem" }}>Comments({userData.comments.length})</h3>
 					</div>
 
 					<div className="comments-container">
@@ -169,7 +176,7 @@ export default function Secret() {
 						)}
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</>
 	) : (
 		<SignIn />

@@ -1,4 +1,5 @@
 import "./Comments.css";
+import { motion } from "framer-motion";
 
 interface Props {
 	id: number;
@@ -9,7 +10,12 @@ interface Props {
 
 export default function Comments({ id, alias, aliasImg, comment }: Props) {
 	return (
-		<div className="comment-container">
+		<motion.div
+			initial={{ x: "-10rem" }}
+			animate={{ x: 0 }}
+			transition={{ duration: 0.5 }}
+			className="comment-container"
+		>
 			<div className="comment-header">
 				<div className="alias-img-header-container">
 					<img className="comment-alias-img" src={aliasImg} alt="alias" />
@@ -22,6 +28,6 @@ export default function Comments({ id, alias, aliasImg, comment }: Props) {
 			<div className="comment-body">
 				<p>{comment}</p>
 			</div>
-		</div>
+		</motion.div>
 	);
 }

@@ -2,12 +2,14 @@
 	padding: 2rem;
 	text-align: center;
 	font-family: "Poppins", sans-serif;
-	position: absolute;
+	position: fixed;
 	top: 2rem;
 	left: 40.5%;
-	box-shadow: 4px 4px 20px rgba(122, 122, 122, 0.3);
+	box-shadow: 4px 4px 20px rgba(122, 122, 122, 0.4);
 	overflow: hidden;
 	animation: fade 3s;
+	background: white;
+	z-index: 10;
 }
 
 .success-pop-up::after {
@@ -39,5 +41,12 @@
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.success-pop-up {
+		top: 4rem;
+		left: 0.85rem;
 	}
 }

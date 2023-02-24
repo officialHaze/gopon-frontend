@@ -1,6 +1,6 @@
 .nav-container {
 	padding: 2rem 0;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Clicker Script", cursive;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -23,6 +23,10 @@ button {
 	cursor: pointer;
 }
 
+.logo {
+	font-size: 1.85rem;
+}
+
 .link {
 	color: black;
 }
@@ -43,4 +47,15 @@ button {
 
 .post-btn {
 	padding: 0.5rem 0.85rem;
+}
+
+@media only screen and (max-width: 600px) {
+	.profile-pic {
+		width: 3rem;
+		height: 3rem;
+	}
+
+	.logo {
+		font-size: 1.5rem;
+	}
 }

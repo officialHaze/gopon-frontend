@@ -7,7 +7,10 @@ export default async function Post(post: {
 	aliasImg: string;
 }) {
 	try {
-		const isUploaded: boolean = await axios.post("http://localhost:5000/upload-secret", post);
+		const isUploaded: boolean = await axios.post(
+			"https://gopon-backend.vercel.app/upload-secret",
+			post
+		);
 		return isUploaded;
 	} catch (err) {
 		throw err;

@@ -19,6 +19,8 @@ textarea {
 	border-radius: 0.5rem;
 	box-shadow: none;
 	resize: none;
+	background: #20262e;
+	color: white;
 }
 
 button {
@@ -64,4 +66,33 @@ button {
 
 .dashboard-cards-container {
 	margin-top: 5rem;
+	/* display: flex;
+	flex-wrap: wrap;
+	gap: 3rem; */
+}
+
+/* .same-user-secret-cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+} */
+
+@media only screen and (max-width: 600px) {
+	textarea,
+	input {
+		width: 100% !important;
+	}
+
+	.post-wrapper {
+		gap: 2rem;
+		flex-direction: column-reverse;
+	}
+
+	.alias-imgs-container {
+		align-items: center;
+	}
+
+	.dashboard-cards-container {
+		margin-top: 2rem;
+	}
 }

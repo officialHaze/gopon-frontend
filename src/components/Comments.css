@@ -1,10 +1,24 @@
 .comment-container {
 	width: 40%;
-	background: white;
 	border-radius: 1rem;
 	box-shadow: 4px 4px 20px rgba(122, 122, 122, 0.3);
 	padding: 0 1rem;
+	position: relative;
+	background: white;
 }
+
+/* .comment-container::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 40px solid white;
+	border-bottom: 25px solid transparent;
+	position: absolute;
+	left: -1.75rem;
+	top: -0.2rem;
+	transform: scale(0.65);
+} */
 
 .comment-header,
 .alias-img-header-container {
@@ -29,4 +43,24 @@
 .comment-body,
 .comment-header {
 	padding: 1rem 0;
+}
+
+@media only screen and (max-width: 600px) {
+	.comment-container {
+		width: 100%;
+	}
+
+	.comment-header > div:nth-child(2) {
+		font-size: 0.75rem;
+	}
+
+	.comment-alias-img {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.comment-body {
+		padding-top: 0;
+		font-size: 0.9rem;
+	}
 }
