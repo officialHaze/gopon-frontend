@@ -1,13 +1,13 @@
 .loader {
 	border: 16px solid none; /* Light grey */
-	border-top: 7px solid #3498db; /* Blue */
+	border-top: 5px solid #3498db; /* Blue */
 	border-radius: 50%;
 	width: 70px;
 	height: 70px;
 	animation: spin 1s linear infinite;
 	position: absolute;
 	left: 45%;
-	top: 45%rem;
+	top: 45%;
 }
 
 @keyframes spin {
