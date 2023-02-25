@@ -105,7 +105,7 @@ export default function Dashboard() {
 	};
 
 	return !isAuthenticated ? (
-		<SignIn />
+		<h1>loading</h1>
 	) : (
 		<>
 			<Navbar />

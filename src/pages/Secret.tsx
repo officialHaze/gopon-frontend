@@ -179,6 +179,6 @@ export default function Secret() {
 			</motion.div>
 		</>
 	) : (
-		<SignIn />
+		<h1>Loading...</h1>
 	);
 }
