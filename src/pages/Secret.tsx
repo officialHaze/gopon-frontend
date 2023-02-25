@@ -6,10 +6,10 @@ import PostComment from "../utils/PostComment";
 import { RiSendPlane2Fill } from "react-icons/ri";
 import Comments from "../components/Comments";
 import Authenticate from "../utils/Authenticate";
-import SignIn from "./SignIn";
 import Navbar from "../components/Navbar";
 import UploadSuccessPopUp from "../components/UploadSuccessPopUp";
 import { motion } from "framer-motion";
+import CustomLoader from "../components/CustomLoader";
 import "./Secret.css";
 
 const getSecret = async (id: string | undefined, index: string | undefined) => {
@@ -179,6 +179,6 @@ export default function Secret() {
 			</motion.div>
 		</>
 	) : (
-		<h1>Loading...</h1>
+		new CustomLoader().start()
 	);
 }

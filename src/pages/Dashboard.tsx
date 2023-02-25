@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { TbSend } from "react-icons/tb";
 import Authenticate from "../utils/Authenticate";
-import SignIn from "./SignIn";
 import GetDatas from "../utils/GetDatas";
 import Post from "../utils/Post";
 import GetUser from "../utils/GetUser";
@@ -9,6 +8,7 @@ import SecretCards from "../components/SecretCards";
 import Navbar from "../components/Navbar";
 import UploadSuccessPopUp from "../components/UploadSuccessPopUp";
 import { motion } from "framer-motion";
+import CustomLoader from "../components/CustomLoader";
 import "./Dashboard.css";
 
 export default function Dashboard() {
@@ -105,7 +105,7 @@ export default function Dashboard() {
 	};
 
 	return !isAuthenticated ? (
-		<h1>loading</h1>
+		new CustomLoader().start()
 	) : (
 		<>
 			<Navbar />
