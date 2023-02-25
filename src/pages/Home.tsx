@@ -58,8 +58,9 @@ export default function Home() {
 					<br />
 					<p style={{ fontSize: "0.85rem", textAlign: "center" }}>
 						<em>
-							(Ps:- Posts favoring criminal activities can be traced back to the IP source and the
-							original account from where the post was made. So, please keep the site clean and fun)
+							(Ps:- Posts favoring criminal and unethical activities can be traced back to the IP
+							source and the original account from where the post was made. So, please keep the site
+							clean and fun)
 						</em>
 					</p>
 				</div>
