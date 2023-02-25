@@ -8,7 +8,7 @@ export default async function Post(post: {
 }) {
 	try {
 		const isUploaded: boolean = await axios.post(
-			"https://gopon-backend.vercel.app/upload-secret",
+			"https://gopon-server.onrender.com/upload-secret",
 			post
 		);
 		return isUploaded;

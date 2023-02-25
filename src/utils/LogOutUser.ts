@@ -4,7 +4,7 @@ export default async function LogOutUser() {
 	try {
 		const status: boolean = await axios({
 			method: "GET",
-			url: "https://gopon-backend.vercel.app/logout",
+			url: "https://gopon-server.onrender.com/logout",
 			withCredentials: true,
 		});
 		console.log(status);

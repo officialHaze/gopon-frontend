@@ -22,7 +22,10 @@ export default function SignIn() {
 					<div className="google-sign-in-container">
 						<div className="google-sign-in">
 							<FcGoogle className="google-logo" />
-							<Link className="link sign-in-link" to="https://gopon-backend.vercel.app/auth/google">
+							<Link
+								className="link sign-in-link"
+								to="https://gopon-server.onrender.com/auth/google"
+							>
 								<h4>Sign in with Google</h4>
 							</Link>
 						</div>

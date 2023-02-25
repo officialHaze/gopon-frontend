@@ -10,7 +10,7 @@ const getUserProfileImg = async () => {
 	try {
 		const { data }: { data: string } = await axios({
 			method: "GET",
-			url: "https://gopon-backend.vercel.app/userProfileImg",
+			url: "https://gopon-server.onrender.com/userProfileImg",
 			withCredentials: true,
 		});
 		return data;

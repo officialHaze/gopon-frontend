@@ -10,7 +10,7 @@ export default function Authenticate(): boolean {
 		try {
 			const { data } = await axios({
 				method: "GET",
-				url: "https://gopon-backend.vercel.app/authenticate",
+				url: "https://gopon-server.onrender.com/authenticate",
 				withCredentials: true,
 			});
 			setIsAuthenticated(data);

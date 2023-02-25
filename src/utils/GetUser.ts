@@ -13,7 +13,7 @@ export default async function GetUser() {
 	try {
 		const user: User = await axios({
 			method: "GET",
-			url: "https://gopon-backend.vercel.app/user",
+			url: "https://gopon-server.onrender.com/user",
 			withCredentials: true,
 		});
 		return user;
