@@ -1,9 +1,7 @@
 import "./Custome-loader.css";
 
-class CustomLoader {
+export default class CustomLoader {
 	start() {
 		return <div className="loader" />;
 	}
 }
-
-export default CustomLoader;
