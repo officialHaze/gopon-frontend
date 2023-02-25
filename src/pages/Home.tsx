@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import "./Home.css";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 export default function Home() {
 	return (
@@ -45,14 +46,13 @@ export default function Home() {
 						them. Accordingly, others can comment on your secret posts if you have shared any in{" "}
 						<span style={{ fontWeight: "800" }}>Gopon</span>. This makes it very interesting because
 						often you might find out that there are more number of people than you anticipated who
-						feels the same way as you do.
+						feel the same way as you do.
 					</p>
 					<br />
 					<p>
 						<span style={{ fontWeight: "800" }}>
-							So, don't keep all those secrets bundled up inside. Share them anonymously with the
-							world!
-						</span>{" "}
+							So, don't keep all those secrets to yourself. Share them anonymously with the world!
+						</span>
 						😉
 					</p>
 					<br />
@@ -64,6 +64,7 @@ export default function Home() {
 					</p>
 				</div>
 			</motion.div>
+			<Footer />
 		</div>
 	);
 }

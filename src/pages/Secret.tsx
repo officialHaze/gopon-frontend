@@ -11,6 +11,7 @@ import UploadSuccessPopUp from "../components/UploadSuccessPopUp";
 import { motion } from "framer-motion";
 import CustomLoader from "../components/CustomLoader";
 import "./Secret.css";
+import Footer from "../components/Footer";
 
 const getSecret = async (id: string | undefined, index: string | undefined) => {
 	try {
@@ -177,6 +178,7 @@ export default function Secret() {
 					</div>
 				</div>
 			</motion.div>
+			<Footer />
 		</>
 	) : (
 		new CustomLoader().start()

@@ -10,6 +10,7 @@ import UploadSuccessPopUp from "../components/UploadSuccessPopUp";
 import { motion } from "framer-motion";
 import CustomLoader from "../components/CustomLoader";
 import "./Dashboard.css";
+import Footer from "../components/Footer";
 
 export default function Dashboard() {
 	interface Secrets {
@@ -221,6 +222,7 @@ export default function Dashboard() {
 					})}
 				</div>
 			</motion.div>
+			<Footer />
 		</>
 	);
 }

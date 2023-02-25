@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import "./Sign-In.css";
+import Footer from "../components/Footer";
 
 export default function SignIn() {
 	return (
@@ -32,6 +33,7 @@ export default function SignIn() {
 					</div>
 				</div>
 			</motion.div>
+			<Footer />
 		</>
 	);
 }

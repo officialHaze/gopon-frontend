@@ -1,0 +1,12 @@
+.footer-container {
+	font-family: "Poppins", sans-serif;
+	padding: 7rem;
+	text-align: center;
+	line-height: 2;
+}
+
+a,
+.footer-container {
+	text-decoration: none;
+	color: rgb(180, 180, 180);
+}
